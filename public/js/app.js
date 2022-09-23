@@ -14,7 +14,7 @@ messageOne.textContent = ''
 messageTwo.textContent = ''
 
 const fetchLocation = (location) => {
-    fetch('http://localhost:3600/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = data.error
